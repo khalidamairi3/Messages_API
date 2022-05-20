@@ -50,7 +50,7 @@ public class TwilioSmsSender implements SmsSender {
      * @param phoneNumber
      * @return
      */
-    private boolean isPhoneNumberValid(String phoneNumber) {
+    public boolean isPhoneNumberValid(String phoneNumber) {
         Pattern ptrn = Pattern.compile("^\\d{10}$");
         Matcher match = ptrn.matcher(phoneNumber);
         return (match.find() && match.group().equals(phoneNumber));
